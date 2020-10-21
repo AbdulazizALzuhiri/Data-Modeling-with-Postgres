@@ -55,3 +55,25 @@ Using two datasets Song Dataset `data/song_data` and Log Dataset `data/log_data`
 Using the song and log datasets, we'll create a star schema optimized for queries on song play analysis. This includes the following tables.
 
 ![Sparkify star schema](sparkify_star_schema.png?raw=true)
+
+## Files included and how to run it 
+
+The source code has 3 main python scripts.
+
+1. `create_tables.py` drops and creates your tables. You run this file to reset your tables before each time you run your ETL scripts.
+
+2. `sql_queries.py` contains all your sql queries, and is imported into the last three files above.
+
+3. `etl.py` reads and processes files from `song_data` and `log_data` and loads them into your tables.
+ You can fill this out based on your work in the ETL notebook.
+
+To run it now first we run `create_tables.py` then `etl.py` so first we create the DB, tabels and insert the data using ETL pipeline.
+
+The other files are:
+
+4. `test.ipynb` displays the first few rows of each table to let you check your database.
+
+5. `etl.ipynb` reads and processes a single file from song_data and log_data and loads the data into your tables.
+ This notebook contains detailed instructions on the ETL process for each of the tables.
+
+6. `data` where we store two datasets Song Dataset `data/song_data` and Log Dataset `data/log_data`.
